@@ -28,6 +28,12 @@ header{
   display: flex;
   justify-content: flex-end;
   align-content: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 #menu ul{ 
@@ -75,6 +81,7 @@ section#ficha img{
   display: block;
   margin: auto;
   margin-bottom: 15px;
+  margin-top: 50px;
 }
 
 section#ficha h1{
@@ -135,5 +142,48 @@ article#video .video-container{
   width: 100%;
   height: 100%;
   border-radius: 8px;
+}
+
+#skillcontainer{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+#skillcontainer .info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#skillcontainer .nome{
+  font-weight: bold;
+  color: var(--texto);
+}
+
+#skillcontainer .porcent{
+  font-weight: bold;
+  color: var(--destaque);
+}
+
+#skillcontainer .barra{
+  width: 100%;
+  height: 8px;
+  background-color: var(--fundo-principal);
+  border-radius: 4px;
+}
+
+#skillcontainer .progresso{
+  height: 100%;
+  background-color: var(--destaque-inverso);
+  border-radius: 4px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  #skillcontainer{
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
